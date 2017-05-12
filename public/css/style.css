@@ -1,0 +1,638 @@
+html  {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@media (min-width: 50em) and (max-width: 61.250em) {
+
+	/* Size and font adjustments to make it fit into the screen*/
+	.nav ul {
+		font-size: 1.2em;
+	}
+
+}
+
+
+@media (max-width: 49.938em) {
+
+	/* Instead of adding a border, we transition the background color */
+	.no-touch .nav ul li:nth-child(6n+1) a:hover,
+	.no-touch .nav ul li:nth-child(6n+1) a:active,
+	.no-touch .nav ul li:nth-child(6n+1) a:focus {
+		background: rgb(227, 119, 20);
+	}
+
+	.no-touch .nav li:nth-child(6n+2) a:hover,
+	.no-touch .nav li:nth-child(6n+2) a:active,
+	.no-touch .nav li:nth-child(6n+2) a:focus {
+		background: rgb(245, 160, 41);
+	}
+
+	.no-touch .nav li:nth-child(6n+3) a:hover,
+	.no-touch .nav li:nth-child(6n+3) a:active,
+	.no-touch .nav li:nth-child(6n+3) a:focus {
+		background: rgb(44, 168, 219);
+	}
+
+	.no-touch .nav li:nth-child(6n+4) a:hover,
+	.no-touch .nav li:nth-child(6n+4) a:active,
+	.no-touch .nav li:nth-child(6n+4) a:focus {
+		background: rgb(31, 120, 176);
+	}
+
+	.no-touch .nav li:nth-child(6n+5) a:hover,
+	.no-touch .nav li:nth-child(6n+5) a:active,
+	.no-touch .nav li:nth-child(6n+5) a:focus {
+		background: rgb(39, 70, 90);
+	}
+
+	.no-touch .nav li:nth-child(6n+6) a:hover,
+	.no-touch .nav li:nth-child(6n+6) a:active,
+	.no-touch .nav li:nth-child(6n+6) a:focus {
+		background: rgb(32, 54, 68);
+	}
+
+	.nav ul li {
+		-webkit-transition: background 0.5s;
+		-moz-transition: background 0.5s;
+		-o-transition: background 0.5s;
+		-ms-transition: background 0.5s;
+		transition: background 0.5s;
+	}
+
+}
+
+/* CSS specific to the 2x3 columns version */
+
+@media (min-width:32.5em) and (max-width: 49.938em) {
+
+	/* Creating the 2 column layout using floating elements once again */
+
+	.nav li {
+		display: block;
+		float: left;
+		width: 50%;
+	}
+
+	/* Adding some padding to make the elements look nicer*/
+	.nav a {
+		padding: 0.8em;
+	}
+
+	/* Displaying the icons on the left, and the text on the right side using inlin-block*/
+	.nav li span,
+	.nav li span.icon {
+		display: inline-block;
+	}
+
+	.nav li span.icon {
+		width: 50%;
+	}
+
+	.nav li .icon + span {
+		font-size: 0.5em;
+	}
+
+	.icon + span {
+		position: relative;
+		top: -0.2em;
+	}
+
+	/* Adaptating to the icons to animate the size and border of the rounded background in a more discreet way */
+	.nav li i {
+		display: inline-block;
+		padding: 8% 9%;
+		border: 4px solid transparent;
+		border-radius: 50%;
+		font-size: 1.5em;
+		background: rgba(255,255,255,0.1);
+		-webkit-transition: border .5s;
+		-moz-transition: border .5s;
+		-o-transition: border .5s;
+		-ms-transition: border .5s;
+		transition: border .5s;
+	}
+
+	/* Transition effect on the border color */
+	.no-touch .nav li:hover i,
+	.no-touch .nav li:active i,
+	.no-touch .nav li:focus i {
+		border: 4px solid rgba(255,255,255,0.1);
+	}
+
+}
+
+/* Adapting the font size and width for smaller screns*/
+@media (min-width: 32.5em) and (max-width: 38.688em) {
+
+	.nav li span.icon {
+		width: 50%;
+	}
+
+	.nav li .icon + span {
+		font-size: 0.9em;
+	}
+}
+
+/* Styling the toggle menu link and hiding it */
+.nav .navtoogle{
+	display: none;
+	width: 100%;
+	padding: 0.5em 0.5em 0.8em;
+	font-family: 'Lato',Calibri,Arial,sans-serif;
+	font-weight: normal;
+	text-align: left;
+	color: rgb(7, 16, 15);
+	font-size: 1.2em;
+	background: none;
+	border: none;
+	border-bottom: 4px solid rgb(221, 221, 221);
+	cursor: pointer;
+}
+
+.icon-menu {
+	position: relative;
+	top: 3px;
+	line-height: 0;
+	font-size: 1.6em;
+}
+
+@media (max-width: 32.438em) {
+
+	/* Unhiding the styled menu link */
+	.nav .navtoogle{
+		margin: 0;
+		display: block;
+	}
+
+	/* Animating the height of the navigation when the button is clicked */
+
+	/* When JavaScript is disabled, we hide the menu */
+	.no-js .nav ul {
+		max-height: 30em;
+		overflow: hidden;
+	}
+
+	/* When JavaScript is enabled, we hide the menu */
+	.js .nav ul {
+		max-height: 0em;
+		overflow: hidden;
+	}
+
+	/* Displaying the menu when the user has clicked on the button*/
+	.js .nav .active + ul {
+		max-height: 30em;
+		overflow: hidden;
+		-webkit-transition: max-height .4s;
+		-moz-transition: max-height .4s;
+		-o-transition: max-height .4s;
+		-ms-transition: max-height .4s;
+		transition: max-height .4s;
+	}
+
+	/* Adapting the layout of the menu for smaller screens : icon on the left and text on the right*/
+
+	.nav li span {
+		display: inline-block;
+		height: 100%;
+	}
+
+	.nav a {
+		padding: 0.5em;
+	}
+
+	.icon + span {
+		margin-left: 1em;
+		font-size: 0.8em;
+	}
+
+	/* Adding a left border of 8 px with a different color for each menu item*/
+	.nav li:nth-child(6n+1) {
+		border-left: 8px solid rgb(174, 78, 1);
+	}
+
+	.nav li:nth-child(6n+2) {
+		border-left: 8px solid rgb(191, 117, 20);
+	}
+
+	.nav li:nth-child(6n+3) {
+		border-left: 8px solid rgb(13, 111, 150);
+	}
+
+	.nav li:nth-child(6n+4) {
+		border-left: 8px solid rgb(10, 75, 117);
+	}
+
+	.nav li:nth-child(6n+5) {
+		border-left: 8px solid rgb(16, 34, 44);
+	}
+
+	.nav li:nth-child(6n+6) {
+		border-left: 8px solid rgb(9, 18, 25);
+	}
+
+	/* make the nav bigger on touch screens */
+	.touch .nav a {
+		padding: 0.8em;
+	}
+}
+
+
+/*  Slider  */
+
+.slider {
+  padding: 25px;
+  overflow: hidden;
+}
+
+.carousel-inner  {
+  height: 400px !important;
+}
+
+.carousel-inner img {
+  height: 400px !important;
+}
+
+article .content  {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  width: 600px;
+  margin: auto;
+}
+
+article .content h2  {
+  font-size: 35px;
+}
+
+article .content p   {
+  font-size: 15px;
+}
+
+/*  login  */
+
+from  {
+  /*background: #3AD3B5;*/
+}
+
+.login{
+  height: 400px;
+  background-color: #19b5fe;
+}
+
+.panel  {
+    margin-bottom: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0  !important;
+}
+
+.panel-heading  {
+    position: relative;
+    background: #446CB3;
+}
+
+.panel-heading  h1  {
+  position: relative;
+
+  color: white;
+  font-size: 22px;
+  margin: 0 0 0 25px;
+}
+
+.panel-heading i  {
+    position: absolute;
+    top: 12px;
+    font-size: 20px;
+    color: white;
+}
+
+.form-group {
+  padding: 15px 38px;
+  margin-bottom: -2px !important;
+}
+
+/*-- enable absolute positioning --*/
+
+.inner-addon  {
+  position: relative;
+  border-radius: none;
+}
+
+/*-- style icon --*/
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+  color: silver;
+}
+
+.inner-addon .fa  {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+  color: silver;
+}
+
+/*-- align-icon --*/
+
+.inner-addon .glyphicon-user  {
+  left: 0;
+  top: 24px;
+}
+.inner-addon .fa-key {
+  left: 0;
+  top: 24px;
+}
+
+/*-- add padding  --*/
+
+.inner-addon input{ padding-left: 30px;}
+.inner-addon input{ padding-right: 30px;}
+
+
+/*  Captcha  */
+
+#captcha  {
+  width: 100%;
+}
+
+#refresh  {
+  color: white;
+}
+
+
+/*  Footer  */
+
+footer  {
+  /*line-height: 1.6;*/
+  /*letter-spacing: 1px;*/
+  background: #34495E;
+  color: white;
+  /*padding: 30px 0;*/
+}
+
+/*footer p   {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}*/
+
+footer p:first-child  {
+  font-size: 10px;
+  margin: 0;
+
+}
+
+footer p:nth-child(2)   {
+  font-size: 10px;
+  margin: 0;
+
+}
+
+footer p:last-child  {
+  font-size: 10px;
+  margin: 0;
+
+}
+
+
+/*rifki*/
+
+  /***
+Bootstrap Line Tabs by @keenthemes
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+***/
+
+.content {
+  padding: 30px;
+  background: #F2F1EF;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+/* Portlet */
+.portlet {
+  background: #fff;
+  padding: 20px;
+}
+
+.portlet.portlet-gray {
+  background: #f7f7f7;
+}
+
+.portlet.portlet-bordered {
+  border: 1px solid #eee;
+}
+
+/* Portlet Title */
+.portlet-title {
+  padding: 0;
+    min-height: 40px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 18px;
+}
+
+.caption {
+  float: left;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.caption.caption-green .caption-subject,
+.caption.caption-green i {
+  color: #4db3a2;
+  font-weight: 200;
+}
+
+.caption.caption-red .caption-subject,
+.caption.caption-red i {
+  color: #e26a6a;
+  font-weight: 200;
+}
+
+.caption.caption-purple .caption-subject,
+.caption.caption-purple i {
+  color: #8775a7;
+  font-weight: 400;
+}
+
+.caption i {
+  color: #777;
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 3px;
+}
+
+.caption-subject {
+  color: #666;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.caption-helper {
+  padding: 0;
+  margin: 0;
+  line-height: 13px;
+  color: #9eacb4;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Actions */
+.actions {
+  float: right;
+    display: inline-block;
+}
+
+.actions a {
+  margin-left: 3px;
+}
+
+.actions .btn {
+  color: #666;
+  padding: 3px 9px;
+  font-size: 13px;
+    line-height: 1.5;
+    background-color: #fff;
+    border-color: #ccc;
+    border-radius: 50px;
+}
+
+.actions .btn i {
+  font-size: 12px;
+}
+
+.actions .btn:hover {
+  background: #f2f2f2;
+}
+
+/* Pagination */
+.pagination {
+  margin: -3px 0 0;
+  border-radius: 50px;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  padding: 4px 10px;
+  font-size: 12px;
+  color: #8775a7;
+  background: #f7f7f7;
+}
+
+.pagination > li:hover > a,
+.pagination > li.active > a,
+.pagination > li.active:hover > a {
+  color: #fff;
+  background: #8775a7;
+  border-color: #8775a7;
+}
+
+/* Inputs */
+.inputs {
+  float: right;
+  display: inline-block;
+  padding: 4px 0;
+  margin-top: -10px;
+}
+
+.input-inline {
+  width: 240px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Tab */
+.portlet-title > .nav-tabs {
+  background: none;
+  margin: 0;
+  float: right;
+  display: inline-block;
+  border: 0;
+}
+
+.portlet-title > .nav-tabs > li {
+  background: none;
+  margin: 0;
+  border: 0;
+}
+
+.portlet-title > .nav-tabs > li > a {
+  background: none;
+  border: 0;
+  padding: 2px 10px 13px;
+  color: #444;
+}
+
+.portlet-title > .nav-tabs > li.active,
+.portlet-title > .nav-tabs > li.active:hover {
+    border-bottom: 4px solid #f3565d;
+    position: relative;
+  }
+
+  .portlet-title > .nav-tabs > li:hover {
+    border-bottom: 4px solid #f29b9f;
+  }
+
+.portlet-title > .nav-tabs > li.active > a,
+.portlet-title > .nav-tabs > li:hover > a {
+  color: #333;
+  background: #fff;
+  border: 0;
+}
+
+/* Btn Circle */
+.actions .btn.btn-circle {
+  width: 28px;
+  height: 28px;
+  padding: 3px 7px;
+  text-align: center;
+}
+
+.actions .btn.btn-circle i {
+  font-size: 11px;
+}
+
+/* Btn Grey Salsa */
+.actions .btn.grey-salsa {
+  border: none;
+  margin-left: 3px;
+  box-shadow: none;
+  border-radius: 50px !important;
+}
+
+.actions .btn.grey-salsa.active {
+  color: #fafcfb;
+  background: #8e9bae;
+}
+  .actions .grey-salsa.btn:hover,
+  .actions .grey-salsa.btn:focus,
+  .actions .grey-salsa.btn:active,
+  .actions .grey-salsa.btn.active {
+  color: #fafcfb;
+  background: #97a3b4;
+}
+
+/* Btn Red */
+.actions .btn.btn-red.active,
+.actions .btn.btn-red:hover {
+  color: #fff;
+  box-shadow: none;
+  background: #e26a6a;
+  border-color: #e26a6a;
+}
+
+/* Btn Red */
+.actions .btn.btn-purple.active,
+.actions .btn.btn-purple:hover {
+  color: #fff;
+  box-shadow: none;
+  background: #8775a7;
+  border-color: #8775a7;
+}

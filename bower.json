@@ -1,0 +1,20 @@
+{
+  "name": "siato",
+  "homepage": "https://github.com/rifkiferdian/sia",
+  "authors": [
+    "rifkiferdian <rifkiferdian.111@gmail.com>"
+  ],
+  "description": "sistem informasi akademik terpadu online",
+  "main": "index.volt",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pnotify": "^3.0.0"
+  }
+}

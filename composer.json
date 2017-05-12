@@ -1,0 +1,16 @@
+{
+    "name": "siato/sia",
+    "description": "sistem informasi akademik terpadu online",
+    "require-dev": {
+        "add": "1"
+    },
+    "authors": [
+        {
+            "name": "rifkiferdian",
+            "email": "rifkiferdian.111@gmail.com"
+        }
+    ],
+    "require": {
+        "m1ome/phalcon-datatables": "1.1.*"
+    }
+}

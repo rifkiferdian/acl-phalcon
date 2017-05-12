@@ -1,0 +1,64 @@
+/* Pilihan Kolom */
+#pilihan-kolom {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+/* Tabel Yatim */
+.foto-yatim img {
+    width: 100%;
+    height: auto;
+}
+.foto-yatim {
+    width: 70px;
+    height: 70px;
+}
+.btn-pilihan-kolom {
+    margin-bottom: 22px;
+}
+/* Pendaftaran Yatim */
+#pendaftaran-yatim {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#anggota_keluarga {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.anggota_keluarga_content {
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+.notif{
+    position: fixed;
+    top:50px;
+    right:0px;
+    margin: 20px;
+    width:200px;
+    height:auto;
+    display: none;
+}
+.notif-success{
+    background: green;
+}
+/* yatim detail */
+.yatim-detail {
+    background: #fff;
+    border: 1px solid #f4f4f4;
+    padding: 35px 15px;
+    margin: 15px;
+}
+.personal-picture img {
+    width: 100%;
+    height: auto;
+}
+.section-poin h2 {
+    font-size: 22px;
+    border-bottom: 1px dotted #999;
+    padding-bottom: 5px;
+}
+.yatim-detail table td:first-child {
+    width: 25%;
+}
