@@ -1,4 +1,4 @@
-# acl-phalcon
+# acl-phalcon-full-ajax-menu
 Username = <b>admin</b>
 password = <b>admin</b>
 >>>>>>> 883cf08491481a063d5460325e10c324cba2720a
