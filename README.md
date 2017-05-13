@@ -5,3 +5,6 @@ password = <b>admin</b>
 <img src="http://128.199.196.3/sia/public/img/acl_phalcon/login.png">
 
 <img src="http://128.199.196.3/sia/public/img/acl_phalcon/acl.png">
+
+<img src="http://128.199.196.3/sia/public/img/acl_phalcon/usergroup.png">
+
